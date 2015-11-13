@@ -1,0 +1,15 @@
+<h3>Week 3 Notes</h3>
+<form class="form-group">
+    <label for="title">Title</label>
+    <input id='title' class='form-control' placeholder="title" type="text" ng-model="note.title">
+    <label for="date">Date</label>
+    <input id='date' class='form-control' type="date" ng-model="note.date">
+    <label for="note">Note</label>
+    <textarea id='note' placeholder="words words words" class='form-control' ng-model="note.text"></textarea>
+</form>
+<div class='btn btn-success' ng-click="saveNotes(note)">SAVE</div>
+<div class='well' ng-repeat="x in noteArray">
+    <h5>{{x.title}}</h5>
+    <h6>{{x.date | date:"MM/dd/yyyy"}}</h6>
+    <p>{{x.text}}</p>
+</div>
