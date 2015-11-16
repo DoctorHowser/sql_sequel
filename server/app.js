@@ -7,7 +7,11 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 
+
+
 app.set('port', process.env.PORT || 5000);
+
+
 
 app.get('/*', function (req, res){
    var file = req.params[0] || "assets/views/index.html";
