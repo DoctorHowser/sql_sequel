@@ -1,0 +1,23 @@
+<h1>THIS IS THE DATE SEARCH PAGE</h1>
+
+<label for="names">Select user to see their orders</label>
+<select ng-model="currentUser" ng-options="user.name for user in users" id="names">
+    <!--<option ng-repeat="user in users">{{user.name}}</option>-->
+</select>
+
+<label for="dateStart">Starting Date</label>
+<input ng-model="currentUser.dateStart" type="date" id="dateStart">
+<label for="dateEnd">Ending Date</label>
+<input ng-model="currentUser.dateEnd" type="date" id="dateEnd">
+<button type="submit" class="btn btn-info" ng-click="search()" title="Search">Search</button>
+
+
+<div class="well" ng-repeat="order in orderInfo">
+    <h3>{{order.name}}, {{order.amount | currency}}</h3>
+    <h4>PO #{{order.order_id}} Order date: {{order.order_date | date:"shortDate"}}</h4>
+    <h5>{{order.address_type}}</h5>
+    <p>{{order.address_street}}</p>
+    <p>{{order.address_city}}, {{address.address_state}}</p>
+    <p>{{order.address_zip}}</p>
+</div>
+   <h4>Total: {{totalSpent | currency}}</h4>

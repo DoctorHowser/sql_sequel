@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="ordersApp">
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -15,5 +15,13 @@
 
 </head>
 <body>
+    <div class="container">
+        <header class="jumbotron text-center">
+            <h1 class="lead">Search Orders</h1>
+        </header>
+        <nav ng-include="'/assets/views/templates/nav.html'"></nav>
+
+        <div ng-view></div>
+    </div>
 </body>
 </html>

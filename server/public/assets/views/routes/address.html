@@ -1,0 +1,12 @@
+<h1>THIS IS THE ADDRESS SEARCH PAGE</h1>
+<label for="names">Select user to see their addresses</label>
+<select ng-model="currentUser" ng-options="user.name for user in users" ng-change="getAddresses()" id="names">
+    <!--<option ng-repeat="user in users">{{user.name}}</option>-->
+</select>
+
+<div class="well" ng-repeat="address in userAddresses">
+    <h4>{{address.address_type}}</h4>
+    <p>{{address.address_street}}</p>
+    <p>{{address.address_city}}, {{address.address_state}}</p>
+    <p>{{address.address_zip}}</p>
+</div>
